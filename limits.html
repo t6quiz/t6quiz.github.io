@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Engine Operating Limits Page</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #page-container {
+      max-width: 1000px;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      overflow-y: auto;
+      max-height: 98vh;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      width: 100%;
+      max-width: 1000px;
+    }
+    td, th {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .table-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      max-width: 1000px;
+      margin-bottom: 20px;
+    }
+    .left-side {
+      width: 55%;
+    }
+    .right-side {
+      width: 45%;
+    }
+    .tall-cell {
+      height: 120px;
+      text-align: left;
+    }
+    input.answer-field {
+      border: 1px solid #aaa;
+      padding: 2px 4px;
+      font-size: inherit;
+      font-family: inherit;
+      vertical-align: middle;
+    }
+    .input-3 {
+      width: 2.4em;
+    }
+    .input-6 {
+      width: 4.8em;
+    }
+    table[style*='text-align: left;'] td.prohibited-input input.answer-field {
+      width: 90%;
+      box-sizing: border-box;
+    }
+    /* Highlight colors */
+    input.correct {
+      background-color: #c8f7c5;
+    }
+    input.incorrect {
+      background-color: #f8c5c5;
+    }
+  </style>
+</head>
+<body>
+  <div id="page-container">
+
+    <!-- ENGINE OPERATING LIMITS TABLE -->
+    <table>
+      <tr><td colspan="7">ENGINE OPERATING LIMITS TABLE</td></tr>
+      <tr>
+        <td>POWER SETTING</td>
+        <td>TORQUE %</td>
+        <td>ITT °C MAX</td>
+        <td>N1 % (1)</td>
+        <td>NP % (4)</td>
+        <td>OIL PRESSURE<br>psi</td>
+        <td>OIL TEMP °C</td>
+      </tr>
+      <tr>
+        <td>TAKEOFF/MAX</td>
+        <td><input type="text" class="answer-field input-3" data-answer="100" /> (8)</td>
+        <td><input type="text" class="answer-field input-3" data-answer="820" /> MAX</td>
+        <td><input type="text" class="answer-field input-3" data-answer="104" /> MAX</td>
+        <td><input type="text" class="answer-field input-3" data-answer="100" /> MAX (2)</td>
+        <td><input type="text" class="answer-field input-3" data-answer="90" /> TO <input type="text" class="answer-field input-3" data-answer="120" /> (6)</td>
+        <td><input type="text" class="answer-field input-3" data-answer="10" /> TO <input type="text" class="answer-field input-3" data-answer="105" /></td>
+      </tr>
+      <tr>
+        <td>IDLE</td>
+        <td><input type="text" class="answer-field input-3" data-answer="1" /> TO <input type="text" class="answer-field input-3" data-answer="10" /> % (9) (GROUND)</td>
+        <td><input type="text" class="answer-field input-3" data-answer="750" /> MAX</td>
+        <td><input type="text" class="answer-field input-3" data-answer="60" /> TO <input type="text" class="answer-field input-3" data-answer="61" /> (GROUND) <br><input type="text" class="answer-field input-3" data-answer="67" /> MIN (FLIGHT)</td>
+        <td><input type="text" class="answer-field input-3" data-answer="46" /> TO <input type="text" class="answer-field input-3" data-answer="50" /> (GROUND)</td>
+        <td><input type="text" class="answer-field input-3" data-answer="90" /> MIN</td>
+        <td><input type="text" class="answer-field input-3" data-answer="-40" /> TO <input type="text" class="answer-field input-3" data-answer="105" /> (GROUND) <br>
+            <input type="text" class="answer-field input-3" data-answer="10" /> TO <input type="text" class="answer-field input-3" data-answer="105" /> (FLT) <br>
+            <input type="text" class="answer-field input-3" data-answer="106" /> TO <input type="text" class="answer-field input-3" data-answer="110" /> (7)</td>
+      </tr>
+      <tr>
+        <td>START</td>
+        <td>- - -</td>
+        <td><input type="text" class="answer-field input-6" data-answer="870-1000" /><br>(<input type="text" class="answer-field input-3" data-answer="5" /> sec)</td>
+        <td>- - -</td>
+        <td>- - -</td>
+        <td><input type="text" class="answer-field input-3" data-answer="200" /> MAX</td>
+        <td><input type="text" class="answer-field input-3" data-answer="-40" /> MIN</td>
+      </tr>
+      <tr>
+        <td>TRANSIENT</td>
+        <td><input type="text" class="answer-field input-3" data-answer="101" /> TO <input type="text" class="answer-field input-3" data-answer="107" /> (<input type="text" class="answer-field input-3" data-answer="5" /> sec) (10)</td>
+        <td><input type="text" class="answer-field input-6" data-answer=821-870"" /><br>(<input type="text" class="answer-field input-3" data-answer="20" /> sec)</td>
+        <td><input type="text" class="answer-field input-3" data-answer="104" /> MAX</td>
+        <td><input type="text" class="answer-field input-3" data-answer="110" /> (<input type="text" class="answer-field input-3" data-answer="20" /> sec) (3)</td>
+        <td><input type="text" class="answer-field input-3" data-answer="40" /> TO <input type="text" class="answer-field input-3" data-answer="130" /> (5)</td>
+        <td><input type="text" class="answer-field input-3" data-answer="106" /> TO <input type="text" class="answer-field input-3" data-answer="110" /><br>(<input type="text" class="answer-field input-6" data-answer="10" /> MINUTES)</td>
+      </tr>
+    </table>
+
+    <!-- NOTES TABLE -->
+    <table>
+      <tr><td>NOTES</td></tr>
+      <tr><td>1. N1 values presented for PMU ON. With PMU OFF, N1 may vary from these values.</td></tr>
+      <tr><td>2. With PMU OFF, permissible maximum NP is <input type="text" class="answer-field input-3" data-answer="100" /> +/- <input type="text" class="answer-field input-3" data-answer="2" /> %.</td></tr>
+      <tr><td>3. Permissible at any operating condition “power setting” for completion of an in-flight emergency.</td></tr>
+      <tr><td>4. Avoid stabilized ground operation from <input type="text" class="answer-field input-3" data-answer="62" /> to <input type="text" class="answer-field input-3" data-answer="80" /> % NP.</td></tr>
+      <tr><td>5. Operation in this range permitted only during aerobatics or spins, and <input type="text" class="answer-field input-3" data-answer="15" /> to <input type="text" class="answer-field input-3" data-answer="40" /> psi for <input type="text" class="answer-field input-3" data-answer="5" /> seconds with PCL at IDLE.</td></tr>
+      <tr><td>6. Normal oil pressure during steady state conditions is <input type="text" class="answer-field input-3" data-answer="90" /> to <input type="text" class="answer-field input-3" data-answer="120" /> psi. Operation at oil pressure less than <input type="text" class="answer-field input-3" data-answer="90" /> psi at flight idle or above is indicative of oil system malfunction.</td></tr>
+      <tr><td>7. Acceptable for ground operation at and below <input type="text" class="answer-field input-3" data-answer="20" />% torque.</td></tr>
+      <tr><td>8. The PMU will govern maximum torque at <input type="text" class="answer-field input-3" data-answer="100" /> +/- <input type="text" class="answer-field input-3" data-answer="2" /> %. Torque above <input type="text" class="answer-field input-3" data-answer="102" /> % at a constant PCL setting and steady flight is indicative of a governing system malfunction.</td></tr>
+      <tr><td>9. Allowable torque range with Np stabilized and PCL at IDLE.</td></tr>
+      <tr><td>10. With the PMU on, torque between <input type="text" class="answer-field input-3" data-answer="102" /> to <input type="text" class="answer-field input-3" data-answer="107" /> % is possible following rapid PCL movement or aerobatic maneuvers. Torque above <input type="text" class="answer-field input-3" data-answer="107" /> % is a limiting system malfunction.</td></tr>
+    </table>
+
+    <div class="table-container">
+      <div class="left-side">
+
+        <!-- AIRSPEED LIMITATIONS -->
+        <table>
+          <tr><td>AIRSPEED LIMITATIONS</td></tr>
+          <tr><td>MAXIMUM AIRSPEED GEAR DOWN (VLE) & FLAP DOWN (VFE) <input type="text" class="answer-field input-3" data-answer="150" /> KIAS</td></tr>
+          <tr><td>MAX OPERATING (VMO) <input type="text" class="answer-field input-3" data-answer="316" /> KIAS / MAX MACH (MMO) <input type="text" class="answer-field input-3" data-answer="0.67" /> MACH</td></tr>
+          <tr><td>TURBULENT AIR PENETRATION SPEED, MAXIMUM: <input type="text" class="answer-field input-3" data-answer="207" /> KIAS</td></tr>
+        </table>
+
+        <!-- PROHIBITED MANEUVERS -->
+        <table style="text-align: left;">
+          <tr><td class="prohibited-input">PROHIBITED MANEUVERS</td></tr>
+          <tr><td class="prohibited-input">1. <input type="text" class="answer-field" data-answer="INVERTED STALLS" /></td></tr>
+          <tr><td class="prohibited-input">2. <input type="text" class="answer-field" data-answer="INVERTED SPINS" /></td></tr>
+          <tr><td class="prohibited-input">3. <input type="text" class="answer-field" data-answer="SPINS WITH PCL ABOVE IDLE" /></td></tr>
+          <tr><td class="prohibited-input">4. <input type="text" class="answer-field" data-answer="SPINS WITH THE LANDING GEAR, FLAPS, OR SPEED BRAKES EXTENDED" /></td></tr>
+          <tr><td class="prohibited-input">5. <input type="text" class="answer-field" data-answer="SPINS WITH PMU OFF" /></td></tr>
+          <tr><td class="prohibited-input">6. <input type="text" class="answer-field" data-answer="AGGRAVATED SPINS PAST TWO TURNS" /></td></tr>
+          <tr><td class="prohibited-input">7. <input type="text" class="answer-field" data-answer="SPINS BELOW 10,000 FEET PRESSURE ALTITUDE" /></td></tr>
+          <tr><td class="prohibited-input">8. <input type="text" class="answer-field" data-answer="SPINS ABOVE 22,000 FEET PRESSURE ALTITUDE" /></td></tr>
+          <tr><td class="prohibited-input">9. <input type="text" class="answer-field" data-answer="ABRUPT CROSS-CONTROLLED (SNAP) MANEUVERS" /></td></tr>
+          <tr><td class="prohibited-input">10. <input type="text" class="answer-field" data-answer="AEROBATIC MANEUVERS, SPINS, OR STALLS WITH A FUEL IMBALANCE GREATER THAN 50 POUNDS BETWEEN WINGS" /></td></tr>
+          <tr><td class="prohibited-input">11. <input type="text" class="answer-field" data-answer="TAIL SLIDES" /></td></tr>
+        </table>
+
+        <!-- AIRCRAFT APPROVAL -->
+        <table>
+          <tr><td class="tall-cell" style="text-align: left;">
+            THE AIRCRAFT HAS BEEN APPROVED ONLY FOR TRANSIT THROUGH<br />
+            <input type="text" class="answer-field input-3" data-answer="5000" /> FEET OF <input type="text" class="answer-field input-3" data-answer="LIGHT RIME" /> ICE.<br />
+            MINIMUM BATTERY VOLTAGE: <input type="text" class="answer-field input-3" data-answer="22.0" /> VOLTS<br />
+            HYDRAULIC CAUTION: &lt; <input type="text" class="answer-field input-3" data-answer="1800" /> PSI, &gt; <input type="text" class="answer-field input-3" data-answer="3500" /> PSI<br />
+            FUEL CAUTION LIGHT: &lt; <input type="text" class="answer-field input-3" data-answer="110" /> POUNDS IN RESPECTIVE WING TANK<br />
+            COCKPIT PRESSURIZATION SCHEDULE LIMIT: <input type="text" class="answer-field input-3" data-answer="3.6" /> +/- <input type="text" class="answer-field input-3" data-answer="0.2" /> PSI
+          </td></tr>
+        </table>
+      </div>
+
+      <div class="right-side">
+
+        <!-- STARTER CYCLE LIMITATIONS -->
+        <table style="text-align: left;">
+          <tr><td>STARTER CYCLE LIMITATIONS</td></tr>
+          <tr><td>STARTER DUTY CYCLE IS LIMITED TO FOUR <input type="text" class="answer-field input-3" data-answer="20 SEC" /> CYCLES</td></tr>
+          <tr><td>COOLING PERIOD AFTER FIRST STARTER CYCLE <input type="text" class="answer-field input-3" data-answer="30 SEC" /></td></tr>
+          <tr><td>COOLING PERIOD AFTER SECOND STARTER CYCLE <input type="text" class="answer-field input-3" data-answer="2 MIN" /></td></tr>
+          <tr><td>COOLING PERIOD AFTER THIRD STARTER CYCLE <input type="text" class="answer-field input-3" data-answer="5 MIN" /></td></tr>
+          <tr><td>COOLING PERIOD AFTER FOURTH STARTER CYCLE <input type="text" class="answer-field input-3" data-answer="30 MIN" /></td></tr>
+        </table>
+
+        <!-- FLIGHT MANEUVERING LIMITATIONS -->
+        <table style="text-align: left;">
+          <tr><td>FLIGHT MANEUVERING LIMITATIONS</td></tr>
+          <tr><td>INVERTED FLIGHT <input type="text" class="answer-field input-3" data-answer="60" /> sec</td></tr>
+          <tr><td>INTENTIONAL ZERO G FLIGHT <input type="text" class="answer-field input-3" data-answer="5" /> sec</td></tr>
+          <tr><td>NEGATIVE G OPERATIONS <input type="text" class="answer-field input-3" data-answer="60" /> sec</td></tr>
+          <tr><td>DO NOT EXCEED -2.5 G FOR LONGER THAN <input type="text" class="answer-field input-3" data-answer="30" /> sec</td></tr>
+          <tr><td>MIN. POS. Gs UPRIGHT BEFORE ADDITIONAL NEG Gs <input type="text" class="answer-field input-3" data-answer="60" /> sec</td></tr>
+        </table>
+
+        <!-- ACCELERATION LIMITATIONS -->
+        <table style="text-align: left;">
+          <tr><td>ACCELERATION LIMITATIONS</td></tr>
+          <tr><td>SYMMETRIC CLEAN <input type="text" class="answer-field input-3" data-answer="+7.0" /> TO <input type="text" class="answer-field input-3" data-answer="-3.5" /> Gs</td></tr>
+          <tr><td>SYMMETRIC GEAR & FLAPS EXTENDED <input type="text" class="answer-field input-3" data-answer="+2.5" /> TO <input type="text" class="answer-field input-3" data-answer="0.0" /> Gs</td></tr>
+          <tr><td>ASYMMETRIC CLEAN <input type="text" class="answer-field input-3" data-answer="+4.7" /> TO <input type="text" class="answer-field input-3" data-answer="-1.0" /> Gs</td></tr>
+          <tr><td>ASYMMETRIC GEAR & FLAPS EXTENDED <input type="text" class="answer-field input-3" data-answer="+2.0" /> TO <input type="text" class="answer-field input-3" data-answer="0.0" /> Gs</td></tr>
+          <tr><td>UNCOORDINATED ROLLING MANEUVERS<br />INITIATED AT <input type="text" class="answer-field input-3" data-answer="-1" /> G SHALL BE LIMITED TO A <input type="text" class="answer-field input-3" data-answer="180" /> DEGREE BANK ANGLE CHANGE</td></tr>
+        </table>
+
+        <!-- OTHER LIMITATIONS -->
+        <table style="text-align: left;">
+          <tr><td>OTHER LIMITATIONS</td></tr>
+          <tr><td>MIN VOLTAGE FOR BATTERY START <input type="text" class="answer-field input-3" data-answer="23.5" /> VOLTS</td></tr>
+          <tr><td>MAX CROSSWIND FOR DRY RUNWAY <input type="text" class="answer-field input-3" data-answer="25" /> KNOTS</td></tr>
+          <tr><td>MAX CROSSWIND FOR WET RUNWAY <input type="text" class="answer-field input-3" data-answer="10" /> KNOTS</td></tr>
+          <tr><td>MAX CROSSWIND FOR ICY RUNWAY <input type="text" class="answer-field input-3" data-answer="5" /> KNOTS</td></tr>
+          <tr><td>MAX TAILWIND COMPONENT FOR TAKEOFF <input type="text" class="answer-field input-3" data-answer="10" /> KNOTS</td></tr>
+          <tr><td>MAXIMUM FUEL FLOW <input type="text" class="answer-field input-3" data-answer="799" /> PPH OR LESS</td></tr>
+        </table>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    document.querySelectorAll('input.answer-field').forEach(input => {
+      input.addEventListener('input', () => {
+        const correct = (input.dataset.answer || '').trim().toLowerCase();
+        const val = input.value.trim().toLowerCase();
+
+        if (val === '') {
+          input.classList.remove('correct', 'incorrect');
+        } else if (val === correct) {
+          input.classList.add('correct');
+          input.classList.remove('incorrect');
+        } else {
+          input.classList.add('incorrect');
+          input.classList.remove('correct');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
