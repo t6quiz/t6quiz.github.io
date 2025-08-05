@@ -5,19 +5,17 @@
   <title>Engine Operating Limits Page</title>
   <style>
     html, body {
-      height: 100%;
       margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #fff;
     }
     #page-container {
       max-width: 1000px;
       width: 100%;
-      padding: 20px;
+      padding: 40px 20px;
+      margin: 0 auto;
       box-sizing: border-box;
-      overflow-y: auto;
-      max-height: 98vh;
     }
     table {
       border-collapse: collapse;
@@ -79,7 +77,7 @@
 
     <!-- ENGINE OPERATING LIMITS TABLE -->
     <table>
-      <tr><td colspan="7">ENGINE OPERATING LIMITS TABLE</td></tr>
+      <tr><td colspan="7"><b>ENGINE OPERATING LIMITS TABLE</b></td></tr>
       <tr>
         <td>POWER SETTING</td>
         <td>TORQUE %</td>
@@ -131,7 +129,7 @@
 
     <!-- NOTES TABLE -->
     <table>
-      <tr><td>NOTES</td></tr>
+      <tr><td><b>NOTES</b></td></tr>
       <tr><td>1. N1 values presented for PMU ON. With PMU OFF, N1 may vary from these values.</td></tr>
       <tr><td>2. With PMU OFF, permissible maximum NP is <input type="text" class="answer-field input-3" data-answer="100" /> +/- <input type="text" class="answer-field input-3" data-answer="2" /> %.</td></tr>
       <tr><td>3. Permissible at any operating condition “power setting” for completion of an in-flight emergency.</td></tr>
@@ -149,7 +147,7 @@
 
         <!-- AIRSPEED LIMITATIONS -->
         <table>
-          <tr><td>AIRSPEED LIMITATIONS</td></tr>
+          <tr><td><b>AIRSPEED LIMITATIONS</b></td></tr>
           <tr><td>MAXIMUM AIRSPEED GEAR DOWN (VLE) & FLAP DOWN (VFE) <input type="text" class="answer-field input-3" data-answer="150" /> KIAS</td></tr>
           <tr><td>MAX OPERATING (VMO) <input type="text" class="answer-field input-3" data-answer="316" /> KIAS / MAX MACH (MMO) <input type="text" class="answer-field input-3" data-answer="0.67" /> MACH</td></tr>
           <tr><td>TURBULENT AIR PENETRATION SPEED, MAXIMUM: <input type="text" class="answer-field input-3" data-answer="207" /> KIAS</td></tr>
@@ -157,7 +155,7 @@
 
         <!-- PROHIBITED MANEUVERS -->
         <table style="text-align: left;">
-          <tr><td class="prohibited-input">PROHIBITED MANEUVERS</td></tr>
+          <tr><td class="prohibited-input"><b>PROHIBITED MANEUVERS</b></td></tr>
           <tr><td class="prohibited-input">1. <input type="text" class="answer-field" data-answer="INVERTED STALLS" /></td></tr>
           <tr><td class="prohibited-input">2. <input type="text" class="answer-field" data-answer="INVERTED SPINS" /></td></tr>
           <tr><td class="prohibited-input">3. <input type="text" class="answer-field" data-answer="SPINS WITH PCL ABOVE IDLE" /></td></tr>
@@ -188,7 +186,7 @@
 
         <!-- STARTER CYCLE LIMITATIONS -->
         <table style="text-align: left;">
-          <tr><td>STARTER CYCLE LIMITATIONS</td></tr>
+          <tr><td><b>STARTER CYCLE LIMITATIONS</b></td></tr>
           <tr><td>STARTER DUTY CYCLE IS LIMITED TO FOUR <input type="text" class="answer-field input-3" data-answer="20 SEC" /> CYCLES</td></tr>
           <tr><td>COOLING PERIOD AFTER FIRST STARTER CYCLE <input type="text" class="answer-field input-3" data-answer="30 SEC" /></td></tr>
           <tr><td>COOLING PERIOD AFTER SECOND STARTER CYCLE <input type="text" class="answer-field input-3" data-answer="2 MIN" /></td></tr>
@@ -198,7 +196,7 @@
 
         <!-- FLIGHT MANEUVERING LIMITATIONS -->
         <table style="text-align: left;">
-          <tr><td>FLIGHT MANEUVERING LIMITATIONS</td></tr>
+          <tr><td><b>FLIGHT MANEUVERING LIMITATIONS</b></td></tr>
           <tr><td>INVERTED FLIGHT <input type="text" class="answer-field input-3" data-answer="60" /> sec</td></tr>
           <tr><td>INTENTIONAL ZERO G FLIGHT <input type="text" class="answer-field input-3" data-answer="5" /> sec</td></tr>
           <tr><td>NEGATIVE G OPERATIONS <input type="text" class="answer-field input-3" data-answer="60" /> sec</td></tr>
@@ -208,7 +206,7 @@
 
         <!-- ACCELERATION LIMITATIONS -->
         <table style="text-align: left;">
-          <tr><td>ACCELERATION LIMITATIONS</td></tr>
+          <tr><td><b>ACCELERATION LIMITATIONS</b></td></tr>
           <tr><td>SYMMETRIC CLEAN <input type="text" class="answer-field input-3" data-answer="+7.0" /> TO <input type="text" class="answer-field input-3" data-answer="-3.5" /> Gs</td></tr>
           <tr><td>SYMMETRIC GEAR & FLAPS EXTENDED <input type="text" class="answer-field input-3" data-answer="+2.5" /> TO <input type="text" class="answer-field input-3" data-answer="0.0" /> Gs</td></tr>
           <tr><td>ASYMMETRIC CLEAN <input type="text" class="answer-field input-3" data-answer="+4.7" /> TO <input type="text" class="answer-field input-3" data-answer="-1.0" /> Gs</td></tr>
@@ -218,7 +216,7 @@
 
         <!-- OTHER LIMITATIONS -->
         <table style="text-align: left;">
-          <tr><td>OTHER LIMITATIONS</td></tr>
+          <tr><td><b>OTHER LIMITATIONS</b></td></tr>
           <tr><td>MIN VOLTAGE FOR BATTERY START <input type="text" class="answer-field input-3" data-answer="23.5" /> VOLTS</td></tr>
           <tr><td>MAX CROSSWIND FOR DRY RUNWAY <input type="text" class="answer-field input-3" data-answer="25" /> KNOTS</td></tr>
           <tr><td>MAX CROSSWIND FOR WET RUNWAY <input type="text" class="answer-field input-3" data-answer="10" /> KNOTS</td></tr>
