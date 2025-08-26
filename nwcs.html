@@ -42,12 +42,17 @@
       color: #555;
     }
     input.answer {
-      width: 90%;
-      font-size: 16px;
-      padding: 4px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      text-transform: uppercase;
+		display: none;
+		background-color: #f9f9f9;
+		color: #333;
+		padding: 10px;
+		margin: 10px 0;
+		border-left: 4px solid #007acc;
+		border-radius: 5px;
+		font-size: 1rem;
+		white-space: pre-wrap;
+		word-wrap: break-word;
+		max-width: 800px;
     }
     input.correct {
       background-color: #c8f7c5;
@@ -69,32 +74,28 @@
   <h1>T-6B EMERGENCY PROCEDURE N/W/C</h1>
   
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".nwc").forEach(input => {
-      input.addEventListener("input", function () {
-        const expected = input.dataset.answer.trim();
-        const value = input.value.trim();
-        const procedureDiv = input.closest(".procedure");
-        const stepDivs = procedureDiv.querySelectorAll(".step");
+document.querySelectorAll('.nwc').forEach(nwcInput => {
+  nwcInput.addEventListener('input', () => {
+    const expected = nwcInput.dataset.answer;
+    const entered = nwcInput.value.trim();
 
-        if (value === expected) {
-          stepDivs.forEach(div => {
-            const answerInput = div.querySelector("input.answer");
-            if (answerInput && answerInput.dataset.answer) {
-              answerInput.value = answerInput.dataset.answer;
-            }
-            div.style.display = "block";
-          });
-        } else {
-          stepDivs.forEach(div => {
-            const answerInput = div.querySelector("input.answer");
-            if (answerInput) answerInput.value = "";
-            div.style.display = "none";
-          });
-        }
+    const procedure = nwcInput.closest('.procedure');
+    const answerDivs = procedure.querySelectorAll('.answer');
+
+    if (entered === expected) {
+      answerDivs.forEach(div => {
+        const content = div.getAttribute('data-answer');
+        div.textContent = content;
+        div.style.display = 'block';
       });
-    });
+    } else {
+      answerDivs.forEach(div => {
+        div.textContent = '';
+        div.style.display = 'none';
+      });
+    }
   });
+});
 </script>
 
   <!-- PROCEDURE 1: ABORT START PROCEDURE -->
@@ -102,8 +103,8 @@
   <h2>ABORT START PROCEDURE</h2>
   <input class="nwc" placeholder="Enter N/W/C (e.g. 6/3/2)" data-answer="2/0/0" />
   
-  <div class="step">1. <input class="answer" data-answer="Note and report to maintenance the degree and duration of any overtemperature" /></div>
-  <div class="step">2. <input class="answer" data-answer="If start is initiated with PCL in the OFF position, abort by reselecting AUTO/RESET on the STARTER switch. If start is initiated with PCL out of the OFF position, but not past the IDLE gate, abort by placing the PCL to OFF or reselecting AUTO/RESET on the STARTER switch. If the PCL is past the IDLE gate, abort by placing the PCL to OFF." /></div>
+  <div class="step">1. <div class="answer" data-answer="Note and report to maintenance the degree and duration of any overtemperature" /></div>
+  <div class="step">2. <div class="answer" data-answer="If start is initiated with PCL in the OFF position, abort by reselecting AUTO/RESET on the STARTER switch. If start is initiated with PCL out of the OFF position, but not past the IDLE gate, abort by placing the PCL to OFF or reselecting AUTO/RESET on the STARTER switch. If the PCL is past the IDLE gate, abort by placing the PCL to OFF." /></div>
 
 </div>
 
