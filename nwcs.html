@@ -67,22 +67,8 @@
 </head>
 <body>
   <h1>T-6B EMERGENCY PROCEDURE N/W/C</h1>
-
-
-<div class="procedure">
-  <h2>EMERGENCY GROUND EGRESS</h2>
-  <input class="nwc" placeholder="Enter N/W/C (e.g. 2/5/0)" data-answer="2/5/0" />
   
-  <div class="step">1. <input class="answer" data-answer="In a situation requiring immediate ground egress, the ejection system has the capability for 0/0 ejection." /></div>
-  <div class="step">2. <input class="answer" data-answer="Oxygen hose, emergency oxygen hose, communication leads, and anti-G suit hose will pull free while vacating cockpit and leg restraint lines will pull through leg restraint garter D rings if released with quick-release lever." /></div>
-  <div class="step">1. <input class="answer" data-answer="" /></div>
-  <div class="step">2. <input class="answer" data-answer="" /></div>
-  <div class="step">3. <input class="answer" data-answer="" /></div>
-  <div class="step">4. <input class="answer" data-answer="" /></div>
-  <div class="step">5. <input class="answer" data-answer="" /></div>
-</div>
-
-<script>
+  <script>
   document.addEventListener('DOMContentLoaded', function () {
     const nwcInputs = document.querySelectorAll('.nwc');
 
@@ -111,9 +97,11 @@
   <!-- PROCEDURE 1: ABORT START PROCEDURE -->
 <div class="procedure">
   <h2>ABORT START PROCEDURE</h2>
-  <input class="nwc" data-answer="2/0/0" /></div>
+  <input class="nwc" placeholder="Enter N/W/C (e.g. 6/3/2)" data-answer="2/0/0" />
+  
   <div class="step">1. <input class="answer" data-answer="Note and report to maintenance the degree and duration of any overtemperature" /></div>
   <div class="step">2. <input class="answer" data-answer="If start is initiated with PCL in the OFF position, abort by reselecting AUTO/RESET on the STARTER switch. If start is initiated with PCL out of the OFF position, but not past the IDLE gate, abort by placing the PCL to OFF or reselecting AUTO/RESET on the STARTER switch. If the PCL is past the IDLE gate, abort by placing the PCL to OFF." /></div>
+
 </div>
 
 <!-- PROCEDURE 2: EMERGENCY ENGINE SHUTDOWN ON THE GROUND -->
