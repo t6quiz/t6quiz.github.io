@@ -68,6 +68,46 @@
 <body>
   <h1>T-6B EMERGENCY PROCEDURE N/W/C</h1>
 
+
+<div class="procedure">
+  <h2>EMERGENCY GROUND EGRESS</h2>
+  <input class="nwc" placeholder="Enter N/W/C (e.g. 2/5/0)" data-answer="2/5/0" />
+  
+  <div class="step">1. <input class="answer" data-answer="In a situation requiring immediate ground egress, the ejection system has the capability for 0/0 ejection." /></div>
+  <div class="step">2. <input class="answer" data-answer="Oxygen hose, emergency oxygen hose, communication leads, and anti-G suit hose will pull free while vacating cockpit and leg restraint lines will pull through leg restraint garter D rings if released with quick-release lever." /></div>
+  <div class="step">1. <input class="answer" data-answer="" /></div>
+  <div class="step">2. <input class="answer" data-answer="" /></div>
+  <div class="step">3. <input class="answer" data-answer="" /></div>
+  <div class="step">4. <input class="answer" data-answer="" /></div>
+  <div class="step">5. <input class="answer" data-answer="" /></div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const nwcInputs = document.querySelectorAll('.nwc');
+
+    nwcInputs.forEach(nwcInput => {
+      const procedureDiv = nwcInput.closest('.procedure');
+      const stepDivs = procedureDiv.querySelectorAll('.step');
+
+      // Hide steps initially
+      stepDivs.forEach(step => step.style.display = 'none');
+
+      // Add input listener
+      nwcInput.addEventListener('input', () => {
+        const expected = nwcInput.getAttribute('data-answer').trim();
+        const entered = nwcInput.value.trim();
+
+        if (entered === expected) {
+          stepDivs.forEach(step => step.style.display = '');
+        } else {
+          stepDivs.forEach(step => step.style.display = 'none');
+        }
+      });
+    });
+  });
+</script>
+
   <!-- PROCEDURE 1: ABORT START PROCEDURE -->
 <div class="procedure">
   <h2>ABORT START PROCEDURE</h2>
@@ -84,10 +124,15 @@
 
 <!-- PROCEDURE 3: EMERGENCY GROUND EGRESS -->
 <div class="procedure">
-  <h2>ABORT START PROCEDURE</h2>
-  <input class="nwc" data-answer="2/0/0" /></div>
+  <h2>EMERGENCY GROUND EGRESS</h2>
+  <input class="nwc" data-answer="2/5/0" /></div>
+  <div class="step">1. <input class="answer" data-answer="In a situation requiring immediate ground egress, the ejection system has the capability for 0/0 ejection." /></div>
+  <div class="step">2. <input class="answer" data-answer="Oxygen hose, emergency oxygen hose, communication leads, and anti-G suit hose will pull free while vacating cockpit and leg restraint lines will pull through leg restraint garter D rings if released with quick-release lever." /></div>
   <div class="step">1. <input class="answer" data-answer="" /></div>
   <div class="step">2. <input class="answer" data-answer="" /></div>
+  <div class="step">3. <input class="answer" data-answer="" /></div>
+  <div class="step">4. <input class="answer" data-answer="" /></div>
+  <div class="step">5. <input class="answer" data-answer="" /></div>
 </div>
 
 <!-- PROCEDURE 4: ABORT -->
