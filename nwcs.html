@@ -72,31 +72,32 @@
   <h1>T-6B EMERGENCY PROCEDURE N/W/C</h1>
   
 <script>
-document.querySelectorAll('.nwc').forEach(nwcInput => {
-  nwcInput.addEventListener('input', () => {
-    const expected = nwcInput.dataset.answer.trim();
-    const entered = nwcInput.value.trim();
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('.nwc').forEach(nwcInput => {
+    nwcInput.addEventListener('input', () => {
+      const expected = nwcInput.dataset.answer.trim();
+      const entered = nwcInput.value.trim();
+      const procedure = nwcInput.closest('.procedure');
+      const stepDivs = procedure.querySelectorAll('.step');
 
-    const procedure = nwcInput.closest('.procedure');
-    const stepDivs = procedure.querySelectorAll('.step');
-
-    if (entered === expected) {
-      stepDivs.forEach(step => {
-        step.style.display = 'block';
-        const answer = step.querySelector('.answer');
-        if (answer) {
-          answer.textContent = answer.dataset.answer;
-        }
-      });
-    } else {
-      stepDivs.forEach(step => {
-        step.style.display = 'none';
-        const answer = step.querySelector('.answer');
-        if (answer) {
-          answer.textContent = '';
-        }
-      });
-    }
+      if (entered === expected) {
+        stepDivs.forEach(step => {
+          step.style.display = 'block';
+          const answer = step.querySelector('.answer');
+          if (answer) {
+            answer.textContent = answer.dataset.answer;
+          }
+        });
+      } else {
+        stepDivs.forEach(step => {
+          step.style.display = 'none';
+          const answer = step.querySelector('.answer');
+          if (answer) {
+            answer.textContent = '';
+          }
+        });
+      }
+    });
   });
 });
 </script>
