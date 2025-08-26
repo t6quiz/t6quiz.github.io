@@ -55,6 +55,14 @@
     input.incorrect {
       background-color: #f8c5c5;
     }
+    input.nwc {
+      width: 30%;
+      font-size: 16px;
+      padding: 4px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      text-transform: uppercase;
+	}
   </style>
 </head>
 <body>
@@ -63,7 +71,7 @@
   <!-- PROCEDURE 1: ABORT START PROCEDURE -->
 <div class="procedure">
   <h2>ABORT START PROCEDURE</h2>
-  <input class="answer" data-answer="2/0/0" /></div>
+  <input class="nwc" data-answer="2/0/0" /></div>
   <div class="step">1. <input class="answer" data-answer="Note and report to maintenance the degree and duration of any overtemperature" /></div>
   <div class="step">2. <input class="answer" data-answer="If start is initiated with PCL in the OFF position, abort by reselecting AUTO/RESET on the STARTER switch. If start is initiated with PCL out of the OFF position, but not past the IDLE gate, abort by placing the PCL to OFF or reselecting AUTO/RESET on the STARTER switch. If the PCL is past the IDLE gate, abort by placing the PCL to OFF." /></div>
 </div>
@@ -71,9 +79,7 @@
 <!-- PROCEDURE 2: EMERGENCY ENGINE SHUTDOWN ON THE GROUND -->
 <div class="procedure">
   <h2>EMERGENCY ENGINE SHUTDOWN ON THE GROUND</h2>
-  <div class="step">*1. <input class="answer" data-answer="PCL - OFF" /></div>
-  <div class="step">*2. <input class="answer" data-answer="FIREWALL SHUTOFF HANDLE - PULL" /></div>
-  <div class="step">*3. <input class="answer" data-answer="EMERGENCY GROUND EGRESS - AS REQUIRED" /></div>
+  <input class="nwc" data-answer="0/0/0" /></div>
 </div>
 
 <!-- PROCEDURE 3: EMERGENCY GROUND EGRESS -->
