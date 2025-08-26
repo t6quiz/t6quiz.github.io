@@ -32,8 +32,8 @@
       text-decoration: underline;
     }
     .step {
-      margin: 8px 0;
-      font-size: 16px;
+		display: none; /* Hide steps until correct N/W/C is entered */
+		margin: 10px 0;
     }
     .note {
       font-size: 14px;
@@ -42,17 +42,15 @@
       color: #555;
     }
     input.answer {
-		display: none;
-		background-color: #f9f9f9;
-		color: #333;
-		padding: 10px;
-		margin: 10px 0;
-		border-left: 4px solid #007acc;
-		border-radius: 5px;
-		font-size: 1rem;
-		white-space: pre-wrap;
-		word-wrap: break-word;
-		max-width: 800px;
+	  background-color: #f9f9f9;
+	  color: #333;
+	  padding: 10px;
+	  border-left: 4px solid #007acc;
+	  border-radius: 5px;
+	  font-size: 1rem;
+	  white-space: pre-wrap;
+	  word-wrap: break-word;
+	  max-width: 800px;
     }
     input.correct {
       background-color: #c8f7c5;
