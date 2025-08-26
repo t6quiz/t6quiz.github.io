@@ -74,22 +74,27 @@
 <script>
 document.querySelectorAll('.nwc').forEach(nwcInput => {
   nwcInput.addEventListener('input', () => {
-    const expected = nwcInput.dataset.answer;
+    const expected = nwcInput.dataset.answer.trim();
     const entered = nwcInput.value.trim();
 
     const procedure = nwcInput.closest('.procedure');
-    const answerDivs = procedure.querySelectorAll('.answer');
+    const stepDivs = procedure.querySelectorAll('.step');
 
     if (entered === expected) {
-      answerDivs.forEach(div => {
-        const content = div.getAttribute('data-answer');
-        div.textContent = content;
-        div.style.display = 'block';
+      stepDivs.forEach(step => {
+        step.style.display = 'block';
+        const answer = step.querySelector('.answer');
+        if (answer) {
+          answer.textContent = answer.dataset.answer;
+        }
       });
     } else {
-      answerDivs.forEach(div => {
-        div.textContent = '';
-        div.style.display = 'none';
+      stepDivs.forEach(step => {
+        step.style.display = 'none';
+        const answer = step.querySelector('.answer');
+        if (answer) {
+          answer.textContent = '';
+        }
       });
     }
   });
