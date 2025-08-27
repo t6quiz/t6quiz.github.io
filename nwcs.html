@@ -61,44 +61,53 @@
       border-radius: 4px;
       text-transform: uppercase;
 	}
+	input.nwc.correct {
+  background-color: #c8f7c5;
+  border-color: green;
+	}
+	input.nwc.incorrect {
+	  background-color: #f8c5c5;
+	  border-color: red;
+	}
   </style>
 </head>
 <body>
   <h1>T-6B EMERGENCY PROCEDURE N/W/C</h1>
   
 <script>
-document.querySelectorAll('.nwc').forEach(nwcInput => {
-  nwcInput.addEventListener('input', () => {
-    const expected = nwcInput.dataset.answer.trim();
-    const entered = nwcInput.value.trim();
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('.nwc').forEach(nwcInput => {
+    nwcInput.addEventListener('input', () => {
+      const expected = nwcInput.dataset.answer.trim();
+      const entered = nwcInput.value.trim();
 
-    const procedure = nwcInput.closest('.procedure');
-    const stepDivs = procedure.querySelectorAll('.step');
+      const procedure = nwcInput.closest('.procedure');
+      const stepDivs = procedure.querySelectorAll('.step');
 
-    // Remove previous status classes
-    nwcInput.classList.remove('correct', 'incorrect');
+      nwcInput.classList.remove('correct', 'incorrect');
 
-    if (entered === expected) {
-      nwcInput.classList.add('correct');
+      if (entered === expected) {
+        nwcInput.classList.add('correct');
 
-      stepDivs.forEach(step => {
-        step.style.display = 'block';
-        const answer = step.querySelector('.answer');
-        if (answer) {
-          answer.textContent = answer.dataset.answer;
-        }
-      });
-    } else {
-      nwcInput.classList.add('incorrect');
+        stepDivs.forEach(step => {
+          step.style.display = 'block';
+          const answer = step.querySelector('.answer');
+          if (answer) {
+            answer.textContent = answer.dataset.answer;
+          }
+        });
+      } else {
+        nwcInput.classList.add('incorrect');
 
-      stepDivs.forEach(step => {
-        step.style.display = 'none';
-        const answer = step.querySelector('.answer');
-        if (answer) {
-          answer.textContent = '';
-        }
-      });
-    }
+        stepDivs.forEach(step => {
+          step.style.display = 'none';
+          const answer = step.querySelector('.answer');
+          if (answer) {
+            answer.textContent = '';
+          }
+        });
+      }
+    });
   });
 });
 </script>
@@ -163,7 +172,7 @@ document.querySelectorAll('.nwc').forEach(nwcInput => {
 
 <!-- PROCEDURE 7: IMMEDIATE AIRSTART (PMU NORM) -->
 <div class="procedure">
-  <h2>ABORT START PROCEDURE</h2>
+  <h2>IMMEDIATE AIRSTART (PMU NORM)</h2>
   <input class="nwc" data-answer="0/4/3" /></div>
   <div class="step">1. <div class="answer" data-answer="Air start attempts outside of the air start envelope may be unsuccessful or result in engine overtemperature. Consideration should be given to ensure air starts are attempted within the air start envelope (125-200 KIAS for sea level to 15,000 feet, or 135-200 KIAS for 15,001 to 20,000 feet)." /></div>
   <div class="step">2. <div class="answer" data-answer="" /></div>
