@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VFR Course Rules Departures - RWY 5/14</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 30px;
+    }
+    .question {
+      margin: 18px 0;
+      font-size: 17px;
+    }
+    input[type="text"] {
+      padding: 4px;
+      font-size: 16px;
+    }
+    input.correct {
+      border: 2px solid green;
+      background-color: #e6ffe6;
+    }
+    input.incorrect {
+      border: 2px solid red;
+      background-color: #ffe6e6;
+    }
+  </style>
+</head>
+<body>
+  <h1>VFR Course Rules Departures - RWY 5/14</h1>
+
+  <form id="quizForm">
+    <div class="question">After takeoff:</div>
+    <div class="question">- On departure, turn to a heading of <input type="text" data-answer="010" size="4" /></div>
+    <div class="question">- Level off at <input type="text" data-answer="700'-800'" size="10" /> MSL until clear of pattern.</div>
+    <div class="question">- Climb at <input type="text" data-answer="180 KIAS" size="10" /> and contact Pensacola Departure CH6.</div>
+    
+    <div class="question">- North MOA/South MOA: Comply with stereo routing and altitude.</div>
+    
+    <div class="question">- VFR to the West, Fox or North: Climb to <input type="text" data-answer="4,500'" size="7" /> MSL. When instructed by ATC to "proceed on course" or when passing <input type="text" data-answer="4,200'" size="7" /> MSL, turn to heading:</div>
+    <div class="question">- Pelican (North): <input type="text" data-answer="360" size="4" /></div>
+    <div class="question">- Area 1 (West): <input type="text" data-answer="270" size="4" /></div>
+    <div class="question">- Area Fox (Northwest): <input type="text" data-answer="270-320" size="9" /></div>
+    <div class="question">- Area 3 (South): <input type="text" data-answer="180" size="4" /></div>
+
+    <div class="question">- When instructed by ATC to "climb to requested VFR altitude" climb to:</div>
+    <div class="question">- Pelican (North): <input type="text" data-answer="5,500'" size="7" /> MSL</div>
+    <div class="question">- Area 1 (West): <input type="text" data-answer="Point CDUBB (NSE 24DME)/(N/S railroad ivo Bay Springs)" size="65" /></div>
+    <div class="question">- Area Fox (NW): <input type="text" data-answer="No later than HWY 29 (NSE 17 DME)" size="40" /></div>
+    <div class="question">- Area 3 (South): <input type="text" data-answer="I-10 (NSE 10 DME)" size="25" /></div>
+  </form>
+
+  <script>
+    document.querySelectorAll('input[type="text"]').forEach(input => {
+      input.addEventListener('input', () => {
+        const expected = input.dataset.answer.trim().toLowerCase();
+        const actual = input.value.trim().toLowerCase();
+        input.classList.remove('correct', 'incorrect');
+        if (actual === expected) {
+          input.classList.add('correct');
+        } else {
+          input.classList.add('incorrect');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
