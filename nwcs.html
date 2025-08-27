@@ -204,70 +204,75 @@ document.addEventListener("DOMContentLoaded", function () {
 <!-- PROCEDURE 9: COMPRESSOR STALLS -->
 <div class="procedure">
   <h2>COMPRESSOR STALLS</h2>
-  <input class="nwc" data-answer="2/0/0" /></div>
+  <input class="nwc" data-answer="1/1/0" /></div>
   <div class="step">NOTE: <div class="answer" data-answer="Setting the DEFOG switch to ON automatically selects high bleed air inflow and will alleviate back pressure on the engine compressor."></div></div>
   <div class="step">WARNING: <div class="answer" data-answer="When the engine is so underpowered that high rates of descent occur, any delay in shutting down the engine to feather the propeller may result in insufficient altitude to reach a suitable landing site."></div></div>
 </div>
 
 <!-- PROCEDURE 10: INADVERTENT DEPARTURE FROM CONTROLLED FLIGHT -->
 <div class="procedure">
-  <h2>ABORT START PROCEDURE</h2>
-  <input class="nwc" data-answer="2/0/0" /></div>
-  <div class="step">1. <div class="answer" data-answer="" /></div>
-  <div class="step">2. <div class="answer" data-answer="" /></div>
+  <h2>INADVERTENT DEPARTURE FROM CONTROLLED FLIGHT</h2>
+  <input class="nwc" data-answer="1/2/1" /></div>
+  <div class="step">NOTE: <div class="answer" data-answer="Cycling of control positions or applying antispin controls prematurely can aggravate aircraft motion and significantly delay recovery."></div></div>
+  <div class="step">WARNING: <div class="answer" data-answer="Improperly positioning the control stick/elevator aft of the neutral position may significantly delay or prevent the aircraft from recovering from an OCF/spin which could result in loss of aircraft and/or crew."></div></div>
+  <div class="step">WARNING: <div class="answer" data-answer="Recommended minimum altitude for ejection is 6000 feet AGL."></div></div>
+  <div class="step">CAUTION: <div class="answer" data-answer="Power-on and inverted departures or spins will result in high loads on the engine and torque shaft. If an inverted or power-on departure is encountered, land as soon as conditions permit. The pilot should suspect possible engine damage and may experience unusual engine operation accompanied by low oil pressure or CHIP detector warning. In all cases of inverted or power-on departures, the engine shall be inspected by qualified maintenance personnel after flight."></div></div>
 </div>
 
 <!-- PROCEDURE 11: FIRE IN FLIGHT -->
 <div class="procedure">
-  <h2>ABORT START PROCEDURE</h2>
-  <input class="nwc" data-answer="2/0/0" /></div>
-  <div class="step">1. <div class="answer" data-answer="" /></div>
-  <div class="step">2. <div class="answer" data-answer="" /></div>
+  <h2>FIRE IN FLIGHT</h2>
+  <input class="nwc" data-answer="0/4/0" /></div>
+  <div class="step">WARNING: <div class="answer" data-answer="Illumination of the fire warning light accompanied by one or more of the following indications is confirmation of an engine fire: smoke; flames; engine vibration; unusual sounds; high ITT; and fluctuating oil pressure, oil temperature, or hydraulic pressure."></div></div>
+  <div class="step">WARNING: <div class="answer" data-answer="A fire warning light with no accompanying indication is not a confirmed fire. Do not shut down an engine for an unconfirmed fire."></div></div>
+  <div class="step">WARNING: <div class="answer" data-answer="High engine compartment temperatures resulting from a bleed air leak may cause illumination of the fire warning light. Reducing the PCL setting towards IDLE will decrease the amount of bleed air and possibly extinguish the fire warning light; however, advancing the PCL might be required to intercept the ELP. Regardless of reducing or advancing the PCL, continue to investigate for indications confirming an engine fire."></div></div>
+  <div class="step">WARNING: <div class="answer" data-answer="If the fire cannot be confirmed, the fire warning system may be at fault and should be tested as conditions permit. If only one fire loop annunciator is illuminated (top or bottom half only), a false fire indication may exist if the other loop tests good."></div></div>
 </div>
 
 <!-- PROCEDURE 12: SMOKE AND FUME ELIMINATION / ELECTRICAL FIRE -->
 <div class="procedure">
-  <h2>ABORT START PROCEDURE</h2>
-  <input class="nwc" data-answer="2/0/0" /></div>
-  <div class="step">1. <div class="answer" data-answer="" /></div>
-  <div class="step">2. <div class="answer" data-answer="" /></div>
+  <h2>SMOKE AND FUME ELIMINATION / ELECTRICAL FIRE</h2>
+  <input class="nwc" data-answer="1/1/0" /></div>
+  <div class="step">NOTE: <div class="answer" data-answer="If a faulty component can be identified as the source of smoke and fumes, turn defective unit off or pull respective circuit breaker. Circuit breakers for items on the hot battery bus are not accessible in flight."></div></div>
+  <div class="step">WARNING: <div class="answer" data-answer="Under varying conditions of fire and/or smoke where aircraft control is jeopardized, the pilot has the option of actuating CFS or ejecting."></div></div>
 </div>
 
 <!-- PROCEDURE 13: CHIP DETECTOR WARNING -->
 <div class="procedure">
-  <h2>ABORT START PROCEDURE</h2>
-  <input class="nwc" data-answer="2/0/0" /></div>
-  <div class="step">1. <div class="answer" data-answer="" /></div>
-  <div class="step">2. <div class="answer" data-answer="" /></div>
+  <h2>CHIP DETECTOR WARNING</h2>
+  <input class="nwc" data-answer="0/0/1" /></div>
+  <div class="step">CAUTION: <div class="answer" data-answer="Higher power settings may aggravate the existing condition."></div></div>
 </div>
 
 <!-- PROCEDURE 14: OIL SYSTEM MALFUNCTION OR LOW OIL PRESSURE -->
 <div class="procedure">
-  <h2>ABORT START PROCEDURE</h2>
-  <input class="nwc" data-answer="2/0/0" /></div>
-  <div class="step">1. <div class="answer" data-answer="" /></div>
-  <div class="step">2. <div class="answer" data-answer="" /></div>
+  <h2>OIL SYSTEM MALFUNCTION OR LOW OIL PRESSURE</h2>
+  <input class="nwc" data-answer="4/0/1" /></div>
+  <div class="step">NOTE: <div class="answer" data-answer="Use this procedure for any of the following: red OIL PX annunciator illuminated, amber OIL PX annunciator illuminated, oil pressure fluctuations, oil temperature out of limits, or visibly confirmed leaking oil from the aircraft."></div></div>
+  <div class="step">NOTE: <div class="answer" data-answer="If OIL PX warning illuminates and oil pressure indicates <5 psi, check OIL TRX circuit breaker on the battery bus circuit breaker panel (left front console). If the circuit breaker is open, it may be reset."></div></div>
+  <div class="step">NOTE: <div class="answer" data-answer="Due to the sensitivity of the signal conditioning unit, a single, momentary illumination of the amber OIL PX caution while maneuvering is possible but may not indicate a malfunction."></div></div>
+  <div class="step">NOTE: <div class="answer" data-answer="Illumination of both red and amber OIL PX message while the oil pressure gage indicates normal pressure indicates an SCU failure."></div></div>
+  <div class="step">CAUTION: <div class="answer" data-answer="Higher power settings may aggravate the existing condition."></div></div>
 </div>
 
 <!-- PROCEDURE 15: LOW FUEL PRESSURE -->
 <div class="procedure">
-  <h2>ABORT START PROCEDURE</h2>
-  <input class="nwc" data-answer="2/0/0" /></div>
-  <div class="step">1. <div class="answer" data-answer="" /></div>
-  <div class="step">2. <div class="answer" data-answer="" /></div>
+  <h2>LOW FUEL PRESSURE</h2>
+  <input class="nwc" data-answer="1/0/1" /></div>
+  <div class="step">NOTE: <div class="answer" data-answer="If the FUEL PX warning remains illuminated, the engine-driven high-pressure fuel pump is suction feeding. Engine operation with high pressure pump suction feeding is limited to 10 hours."></div></div>
+  <div class="step">CAUTION: <div class="answer" data-answer="Unless a greater emergency exists, do not reset BOOST PUMP circuit breaker (left front console) if open."></div></div>
 </div>
 
 <!-- PROCEDURE 16: HIGH FUEL FLOW -->
 <div class="procedure">
-  <h2>ABORT START PROCEDURE</h2>
-  <input class="nwc" data-answer="2/0/0" /></div>
-  <div class="step">1. <div class="answer" data-answer="" /></div>
-  <div class="step">2. <div class="answer" data-answer="" /></div>
+  <h2>HIGH FUEL FLOW</h2>
+  <input class="nwc" data-answer="0/1/0" /></div>
+  <div class="step">WARNING: <div class="answer" data-answer="Higher power settings accompanied by high ITT may aggravate the existing condition. However, if ITT is within limits reducing power could result in engine flameout."></div></div>
 </div>
 
 <!-- PROCEDURE 17: OBOGS FAILURE/OVERTEMP/PHYSIOLOGICAL SYMPTOMS -->
 <div class="procedure">
-  <h2>ABORT START PROCEDURE</h2>
+  <h2>OBOGS FAILURE/OVERTEMP/PHYSIOLOGICAL SYMPTOMS</h2>
   <input class="nwc" data-answer="2/0/0" /></div>
   <div class="step">1. <div class="answer" data-answer="" /></div>
   <div class="step">2. <div class="answer" data-answer="" /></div>
@@ -275,7 +280,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!-- PROCEDURE 18: EJECT -->
 <div class="procedure">
-  <h2>ABORT START PROCEDURE</h2>
+  <h2>EJECT</h2>
   <input class="nwc" data-answer="2/0/0" /></div>
   <div class="step">1. <div class="answer" data-answer="" /></div>
   <div class="step">2. <div class="answer" data-answer="" /></div>
@@ -283,7 +288,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!-- PROCEDURE 19: FORCED LANDING -->
 <div class="procedure">
-  <h2>ABORT START PROCEDURE</h2>
+  <h2>FORCED LANDING</h2>
   <input class="nwc" data-answer="2/0/0" /></div>
   <div class="step">1. <div class="answer" data-answer="" /></div>
   <div class="step">2. <div class="answer" data-answer="" /></div>
@@ -291,7 +296,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!-- PROCEDURE 20: PRECAUTIONARY EMERGENCY LANDING (PEL) -->
 <div class="procedure">
-  <h2>ABORT START PROCEDURE</h2>
+  <h2>PRECAUTIONARY EMERGENCY LANDING (PEL)</h2>
   <input class="nwc" data-answer="2/0/0" /></div>
   <div class="step">1. <div class="answer" data-answer="" /></div>
   <div class="step">2. <div class="answer" data-answer="" /></div>
