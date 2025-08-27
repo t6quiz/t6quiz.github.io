@@ -67,32 +67,38 @@
   <h1>T-6B EMERGENCY PROCEDURE N/W/C</h1>
   
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll('.nwc').forEach(nwcInput => {
-    nwcInput.addEventListener('input', () => {
-      const expected = nwcInput.dataset.answer.trim();
-      const entered = nwcInput.value.trim();
-      const procedure = nwcInput.closest('.procedure');
-      const stepDivs = procedure.querySelectorAll('.step');
+document.querySelectorAll('.nwc').forEach(nwcInput => {
+  nwcInput.addEventListener('input', () => {
+    const expected = nwcInput.dataset.answer.trim();
+    const entered = nwcInput.value.trim();
 
-      if (entered === expected) {
-        stepDivs.forEach(step => {
-          step.style.display = 'block';
-          const answer = step.querySelector('.answer');
-          if (answer) {
-            answer.textContent = answer.dataset.answer;
-          }
-        });
-      } else {
-        stepDivs.forEach(step => {
-          step.style.display = 'none';
-          const answer = step.querySelector('.answer');
-          if (answer) {
-            answer.textContent = '';
-          }
-        });
-      }
-    });
+    const procedure = nwcInput.closest('.procedure');
+    const stepDivs = procedure.querySelectorAll('.step');
+
+    // Remove previous status classes
+    nwcInput.classList.remove('correct', 'incorrect');
+
+    if (entered === expected) {
+      nwcInput.classList.add('correct');
+
+      stepDivs.forEach(step => {
+        step.style.display = 'block';
+        const answer = step.querySelector('.answer');
+        if (answer) {
+          answer.textContent = answer.dataset.answer;
+        }
+      });
+    } else {
+      nwcInput.classList.add('incorrect');
+
+      stepDivs.forEach(step => {
+        step.style.display = 'none';
+        const answer = step.querySelector('.answer');
+        if (answer) {
+          answer.textContent = '';
+        }
+      });
+    }
   });
 });
 </script>
