@@ -77,21 +77,23 @@
     *If conducting aerobatics or OCF in Area 3, maintain assigned squawk when crossing I-10 for VFR flight following. Do not call clear to the south or cancel radar advisories. Radios should be tuned to Area 3 Common (19) & Pensacola Approach when directed.
   </div>
 
-  <script>
-    const inputs = document.querySelectorAll('input.answer');
-    inputs.forEach(input => {
-      input.addEventListener('input', () => {
-        const correctAnswer = input.dataset.answer.trim().toUpperCase();
-        const userAnswer = input.value.trim().toUpperCase();
-        if (userAnswer === correctAnswer) {
-          input.classList.add('correct');
-          input.classList.remove('incorrect');
-        } else {
-          input.classList.remove('correct');
-          input.classList.add('incorrect');
-        }
-      });
+<script>
+  const normalize = str => str.trim().replace(/\s+/g, ' ').toUpperCase();
+
+  const inputs = document.querySelectorAll('input.answer');
+  inputs.forEach(input => {
+    input.addEventListener('input', () => {
+      const correct = normalize(input.dataset.answer);
+      const user = normalize(input.value);
+      if (user === correct) {
+        input.classList.add('correct');
+        input.classList.remove('incorrect');
+      } else {
+        input.classList.remove('correct');
+        input.classList.add('incorrect');
+      }
     });
-  </script>
+  });
+</script>
 </body>
 </html>
