@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jay Course Rules</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      border: 2px solid #000;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 30px;
+      border: 2px solid black;
+      padding: 10px;
+    }
+    .step {
+      margin: 8px 0;
+      font-size: 16px;
+    }
+    .special {
+      margin: 8px 0;
+      font-size: 16px;
+      text-decoration: underline;
+	  font-weight: bold;
+    }
+    .specialtwo {
+      margin: 8px 0;
+      font-size: 16px;
+	  font-weight: bold;
+    }
+    input.answer {
+      font-size: 16px;
+      padding: 4px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input.correct {
+      background-color: #c8f7c5;
+    }
+    input.incorrect {
+      background-color: #f8c5c5;
+    }
+  </style>
+</head>
+<body>
+  <h1>Jay Course Rules</h1>
+  
+  <div class="special">Recovery</div>
+  <div class="step">Altitude: <input class="answer" data-answer="4,500'" style="width: 40px;" /> MSL</div>
+  <div class="step">Airspeed: <input class="answer" data-answer="240" style="width: 40px;" /> KIAS</div>
+  <div class="step">Angle: <input class="answer" data-answer="Intercept HWY 113 North of T Intersection between 135 and 225" style="width: 500px;" /></div>
+  <input class="answer" data-answer="Descend to 2,200' MSL on course to Jay" style="width: 500px;" />.</div>
+  <div class="step">ATIS: <input class="answer" data-answer="Contact Pensacola Approach (CH6) prior to Jay with ATIS" style="width: 500px;" />.</div>
+
+  <div class="specialtwo">T Intersection to Jay</div>
+  <div class="step">- <input class="answer" data-answer="Turn 130 to Jay then descend to 2,200' MSL" style="width: 200px;" />.</div>
+
+  <div class="specialtwo">Jay to Waldo (RW 05/14)</div>
+  <div class="step">- <input class="answer" data-answer="Turn 160 to Waldo" style="width: 200px;" /></div>
+
+  <div class="specialtwo">Jay to Easy (RWY 23/32)</div>
+  <div class="step">- <input class="answer" data-answer="Turn 115 to Nugget" style="width: 200px;" /></div>
+  <div class="step">- <input class="answer" data-answer="At Nugget, turn 145 to Easy" style="width: 200px;" /></div>
+
+  <br>
+  <div class="specialtwo">SLOW DOWN TO 200 KIAS WHEN CROSSING WALDO/EASY. UPON REACHING 200 KIAS BEGIN DESCENT TO 1,300' MSL.</div>
+
+<script>
+  const normalize = str => str.trim().replace(/\s+/g, ' ').toUpperCase();
+
+  const inputs = document.querySelectorAll('input.answer');
+  inputs.forEach(input => {
+    input.addEventListener('input', () => {
+      const correct = normalize(input.dataset.answer);
+      const user = normalize(input.value);
+      if (user === correct) {
+        input.classList.add('correct');
+        input.classList.remove('incorrect');
+      } else {
+        input.classList.remove('correct');
+        input.classList.add('incorrect');
+      }
+    });
+  });
+</script>
+</body>
+</html>
