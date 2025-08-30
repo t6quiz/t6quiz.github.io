@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Five Lakes Course Rules</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      border: 2px solid #000;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 30px;
+      border: 2px solid black;
+      padding: 10px;
+    }
+    .step {
+      margin: 8px 0;
+      font-size: 16px;
+    }
+    .special {
+      margin: 8px 0;
+      font-size: 16px;
+      text-decoration: underline;
+	  font-weight: bold;
+    }
+    .specialtwo {
+      margin: 8px 0;
+      font-size: 16px;
+	  font-weight: bold;
+    }
+    input.answer {
+      font-size: 16px;
+      padding: 4px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input.correct {
+      background-color: #c8f7c5;
+    }
+    input.incorrect {
+      background-color: #f8c5c5;
+    }
+  </style>
+</head>
+<body>
+  <h1>Five Lakes Course Rules</h1>
+  
+  <div class="special">Recovery</div>
+  <div class="step">Altitude: <input class="answer" data-answer="4,500'" style="width: 40px;" /> MSL by Five Lakes.</div>
+  <div class="step">Airspeed: <input class="answer" data-answer="240" style="width: 40px;" /> KIAS by Five Lakes.</div>
+  <div class="step">Angle: <input class="answer" data-answer="Intercept 180 by Five Lakes between a 135 and 225, <45" style="width: 500px;" /></div>
+  <input class="answer" data-answer="Descend to 2,700' MSL crossing Southern Power Line Slash" style="width: 500px;" />.</div>
+  <div class="step">ATIS: <input class="answer" data-answer="@ Southern Power Line Slash switch to Pensacola Approach (CH6) with ATIS" style="width: 500px;" />.</div>
+
+  <div class="specialtwo">Conecuh River Bridge to Pt Waldo (RWY 05/14)</div>
+  <div class="step">- Over the bridge, turn <input class="answer" data-answer="205" style="width: 40px;" /> to <input class="answer" data-answer="Pt Nugget" style="width: 50px;" />.</div>
+  <div class="step">- Continue <input class="answer" data-answer="205" style="width: 40px;" /> until <input class="answer" data-answer="Pt Waldo" style="width: 50px;" />.</div>
+
+  <div class="specialtwo">Conecuh River Bridge to Pt Easy (RW 23/32)</div>
+  <div class="step">- Over the bridge, turn <input class="answer" data-answer="165" style="width: 40px;" /> to intercept <input class="answer" data-answer="HWY 191 north of Munson" style="width: 300x;" />.</div>
+  <div class="step">- <input class="answer" data-answer="Fly 1/4 WTD west of HWY 191 heading 180" style="width: 500px;" />.</div>
+  <div class="step">- <input class="answer" data-answer="Cross the bend along HWY 191, fly SW 1/4 east of HWY 191 to Pt Easy" style="width: 500px;" />.</div>
+  <br>
+  <div class="specialtwo">SLOW DOWN TO 200 KIAS WHEN CROSSING WALDO OR EASY. UPON REACHING 200 KIAS BEGIN DESCENT TO 1,300' MSL.</div>
+
+<script>
+  const normalize = str => str.trim().replace(/\s+/g, ' ').toUpperCase();
+
+  const inputs = document.querySelectorAll('input.answer');
+  inputs.forEach(input => {
+    input.addEventListener('input', () => {
+      const correct = normalize(input.dataset.answer);
+      const user = normalize(input.value);
+      if (user === correct) {
+        input.classList.add('correct');
+        input.classList.remove('incorrect');
+      } else {
+        input.classList.remove('correct');
+        input.classList.add('incorrect');
+      }
+    });
+  });
+</script>
+</body>
+</html>
