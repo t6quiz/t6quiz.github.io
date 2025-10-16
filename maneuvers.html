@@ -172,23 +172,28 @@
   <div class="step">12. <input class="answer" data-answer="execute Inadvertent departure from controlled flight procedure" /></div>
 </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const inputs = document.querySelectorAll("input.answer");
-      inputs.forEach(input => {
-        input.addEventListener("input", () => {
-          const correct = input.dataset.answer.trim().toLowerCase();
-          const user = input.value.trim().toLowerCase();
-          if (user === correct) {
-            input.classList.add("correct");
-            input.classList.remove("incorrect");
-          } else {
-            input.classList.remove("correct");
-            input.classList.add("incorrect");
-          }
-        });
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const inputs = document.querySelectorAll("input.answer");
+    inputs.forEach(input => {
+      input.addEventListener("input", () => {
+        const correct = input.dataset.answer.trim().toLowerCase();
+        const user = input.value.trim().toLowerCase();
+
+        if (user === "???") {
+          input.value = input.dataset.answer;
+          input.classList.add("correct");
+          input.classList.remove("incorrect");
+        } else if (user === correct) {
+          input.classList.add("correct");
+          input.classList.remove("incorrect");
+        } else {
+          input.classList.remove("correct");
+          input.classList.add("incorrect");
+        }
       });
     });
-  </script>
+  });
+</script>
 </body>
 </html>
