@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WP3N4JJ7C2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WP3N4JJ7C2');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>T-6B CONTACTS PROFILE MANEUVERS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      border: 2px solid #000;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-transform: uppercase;
+    }
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 30px;
+      text-decoration: underline;
+      color: blue;
+    }
+    .procedure {
+      margin-bottom: 30px;
+    }
+    .procedure h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #333;
+      text-decoration: underline;
+    }
+    .step {
+      margin: 8px 0;
+      font-size: 16px;
+    }
+    .note {
+      font-size: 14px;
+      font-style: italic;
+      margin: 8px 0;
+      color: #555;
+    }
+    input.answer {
+      width: 90%;
+      font-size: 16px;
+      padding: 4px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    input.correct {
+      background-color: #c8f7c5;
+    }
+    input.incorrect {
+      background-color: #f8c5c5;
+    }
+  </style>
+</head>
+<body>
+  <h1>T-6B CONTACTS PROFILE MANEUVERS</h1>
+
+  <!-- PROCEDURE 1: ABORT START PROCEDURE -->
+<div class="procedure">
+  <h2>G-Warm Maneuver</h2>
+  <div class="step">1. <input class="answer" data-answer="Wings level at 200-220 KIAS" /></div>
+  <div class="step">2. <input class="answer" data-answer="PCL - MAX" /></div>
+  <div class="step">3. <input class="answer" data-answer="Smoothly roll to 70-80 AOB, allowing the nose to drop slightly below the horizon" /></div>
+  <div class="step">4. <input class="answer" data-answer="Slight pause once at AOB" /></div>
+  <div class="step">5. <input class="answer" data-answer="Smoothly pull to approximately 4Gs" /></div>
+  <div class="step">6. <input class="answer" data-answer="4-5 Breaths" /></div>
+  <div class="step">7. <input class="answer" data-answer="Recover - Wings level" /></div>
+</div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const inputs = document.querySelectorAll("input.answer");
+      inputs.forEach(input => {
+        input.addEventListener("input", () => {
+          const correct = input.dataset.answer.trim().toLowerCase();
+          const user = input.value.trim().toLowerCase();
+          if (user === correct) {
+            input.classList.add("correct");
+            input.classList.remove("incorrect");
+          } else {
+            input.classList.remove("correct");
+            input.classList.add("incorrect");
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
