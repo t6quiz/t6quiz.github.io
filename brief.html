@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VT-6 NATOPS BRIEF</title>
+  <style>
+    :root { --w: 860px; }
+    body { font-family: Arial, sans-serif; background:#fff; color:#111; padding:32px; margin:0 auto; max-width:var(--w); line-height:1.45; }
+    header { text-align:center; margin-bottom:24px; }
+    h1 { font-size:22px; margin:0 0 4px; text-transform:uppercase; text-decoration:underline; color:#0a3aff; }
+    section { border:2px solid #000; padding:20px; margin:20px 0; box-shadow:0 0 10px rgba(0,0,0,.08); }
+    h2 { font-size:18px; margin:0 0 12px; text-decoration:underline; }
+    ol { margin:0 0 0 20px; padding:0; }
+    li { margin:8px 0; }
+    .bold { font-weight:bold; }
+    .sub { margin-top:8px; }
+    input.answer { width:100%; font-size:16px; padding:6px 8px; border:1px solid #ccc; border-radius:6px; background:#fff; text-transform:uppercase; }
+    .correct { background:#c8f7c5 !important; }
+    .incorrect { background:#f8c5c5 !important; }
+    ol.alpha { list-style-type: none; counter-reset: alpha; }
+    ol.alpha > li { position: relative; padding-left: 24px; }
+    ol.alpha > li::before { position:absolute; left:0; counter-increment: alpha; content: counter(alpha, lower-alpha) ") "; font-weight:bold; }
+    ol.roman { list-style-type: none; counter-reset: roman; }
+    ol.roman > li { position: relative; padding-left: 24px; }
+    ol.roman > li::before { position:absolute; left:0; counter-increment: roman; content: counter(roman, lower-roman) ") "; font-weight:bold; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>VT-6 NATOPS BRIEF</h1>
+  </header>
+
+  <section>
+    <h2>1) Aircrew</h2>
+    <ol class="alpha">
+      <li><span class="bold">EP / Question / Quote of the Day</span></li>
+      <li><span class="bold">IMSAFE / Human Factors / Crew Day and Rest / Work Week limits</span></li>
+      <li><span class="bold">Form Specific:</span> Designated Section Lead / Formation Lead</li>
+      <li><span class="bold">Seat Position</span> (INAV or IP/IP only)</li>
+      <li><span class="bold">Current read and initial</span></li>
+      <li><span class="bold">Current NATOPS / Pubs / Charts/ EKB packed &amp; charged</span></li>
+      <li><span class="bold">SNA EKB use and restrictions</span> — SNA should brief the acceptable use according to<br>COMTRAWINGFIVEINST 3710.19F and enclosure (4) of same instruction.</li>
+      <li><span class="bold">Review ATJ to include:</span>
+        <ol class="roman sub">
+          <li>Airsickness history</li>
+          <li>Below MIF / incomplete items in block / SSRs</li>
+          <li>Previous hop complete or incomplete</li>
+          <li>Mandatory or optional warm up window</li>
+          <li>Review green/blue card</li>
+        </ol>
+      </li>
+      <li><span class="bold">DOR/TTO Policy</span></li>
+      <li><span class="bold">JPPT Discussion Items</span> (May be moved to end of brief at IP’s discretion)</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>2) Mission Conduct</h2>
+    <ol class="alpha">
+      <li><span class="bold">Side Number / Callsign</span></li>
+      <li><span class="bold">Walk / Takeoff / Land times</span></li>
+      <li><span class="bold">Weather / NOTAMS / AHAS / TFRs</span></li>
+      <li><span class="bold">TOLD</span> (student calculates own TOLD data) For KNSE, plan worst case scenario: 6,000 ft runway, 0 winds, RWY14 at .7% downhill grade.</li>
+      <li><span class="bold">Flight Plan</span></li>
+      <li><span class="bold">Profile –</span> Origin / Departure / Stage Maneuvers / Destination / Alternate</li>
+      <li><span class="bold">Fuel management</span>
+        <ol class="roman sub">
+          <li><span class="bold">Joker / Bingo / Divert –</span> Discuss reasoning for Joker / Bingo / Divert values and when to change them.</li>
+          <li><span class="bold">Minimum / Emergency Fuel –</span> Declare minimum or emergency fuel if calculated to land below 200lbs or 120lbs respectively.</li>
+        </ol>
+      </li>
+      <li><span class="bold">Frequencies / NAVAIDS</span><br>
+        <input class="answer" data-answer="At a minimum IP shall monitor UHF at all times for GUARD transmissions. NAVAID set to 112.3 or as required." placeholder="Type response" style="width:95%;" />
+      </li>
+      <li><span class="bold">Radio procedures and discipline</span><br>
+        <input class="answer" data-answer="Pilot at the controls will make all radio calls unless otherwise briefed using standard clear and concise COMMS. The non-flying pilot will back up the flying pilot listening for own aircraft’s callsign." placeholder="Type response" style="width:98%;" />
+      </li>
+      <li><span class="bold">Change of aircraft controls</span><br>
+        <input class="answer" data-answer="Execute a positive three way change of controls to include the UFCP with emphasis on the word “controls.” i.e. “I have the controls,” “You have the controls,” “I have the controls.” The flying pilot may request UFCP inputs from the non-flying pilot. The non-flying pilot will inform the flying pilot of any changes to the FMS/UFCP to avoid entry errors. If in doubt as to who has the controls, maintain control and verify who has the controls. In the event of ICS failure “shake to take, pump to pass.”" placeholder="Type response" style="width:98%;" />
+      </li>
+      <li><span class="bold">Non flying pilot duties for IMC flight and instrument approaches</span><br>
+        Call out deviations of:<br>
+        <input class="answer" data-answer="+/- 10 KIAS, +/-10deg of heading, +/- 100’ of altitude, greater than 30deg angle of bank (AoB), pitch attitudes greater than 15deg nose up and 10deg nose down." placeholder="Type response" style="width:98%;" /><br>
+        <input class="answer" data-answer="Less than a minute to live (VSI rate greater than RADALT altitude)" placeholder="Type response" style="width:98%;" /><br>
+        <input class="answer" data-answer="Vertigo or Spatial-D" placeholder="Type response" style="width:98%;" /><br>
+        <input class="answer" data-answer="Runway in sight" placeholder="Type response" style="width:98%;" /><br>
+        <input class="answer" data-answer="Use the two-challenge rule, if the other crewmember doesn’t respond after two calls, assume the controls." placeholder="Type response" style="width:98%;" /><br>
+        <input class="answer" data-answer="Brief any additional assigned duties for flight." placeholder="Type response" style="width:98%;" />
+      </li>
+      <li><span class="bold">Clearing / Lookout procedures</span><br>
+        <input class="answer" data-answer="Call out traffic using the clock system (e.g. 1 o’clock, 2 o’clock, 3 o’clock), approximate range, high/level/low, factor/no factor." placeholder="Type response" style="width:98%;" /><br>
+        <input class="answer" data-answer="Be directive vice descriptive to avoid a collision (e.g. BREAK RIGHT, BREAK LEFT, etc.)." placeholder="Type response" style="width:98%;" /><br>
+        <input class="answer" data-answer="Any crewmember can assume controls to avoid a collision." placeholder="Type response" style="width:98%;" /><br>
+        <input class="answer" data-answer="If directed by ATC to find traffic or follow traffic, coordinate internally before communicating externally." placeholder="Type response" style="width:98%;" />
+      </li>
+    </ol>
+  </section>
+
+  <script>
+    (function(){
+      const answers = document.querySelectorAll('.answer');
+      const norm = s => (s||'').trim().replace(/\s+/g,' ').toUpperCase();
+      function check(el){
+        const want = norm(el.dataset.answer);
+        const got = norm(el.value);
+        if(!want){ el.classList.remove('correct','incorrect'); return; }
+        if(got === want){ el.classList.add('correct'); el.classList.remove('incorrect'); }
+        else { el.classList.remove('correct'); if(got.length) el.classList.add('incorrect'); else el.classList.remove('incorrect'); }
+      }
+      answers.forEach(el=>{ el.addEventListener('input', ()=>check(el)); check(el); });
+    })();
+  </script>
+</body>
+</html>
