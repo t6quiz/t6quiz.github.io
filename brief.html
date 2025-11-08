@@ -109,16 +109,21 @@
   <script>
     (function(){
       const answers = document.querySelectorAll('.answer');
-      const norm = s => (s||'').trim().replace(/\s+/g,' ').toUpperCase();
+      function normalize(str){
+        return (str || '').trim().replace(/\r/g, '').replace(/\s+/g, ' ').toLowerCase();
+      }
       function check(el){
-        const want = el.dataset.answer.replace(/\r/g, '').trim();
-        const got = el.value.replace(/\r/g, '').trim();
+        const want = normalize(el.dataset.answer);
+        const got = normalize(el.value);
         if(!want){ el.classList.remove('correct','incorrect'); return; }
         if(got === want){ el.classList.add('correct'); el.classList.remove('incorrect'); }
-        else { el.classList.remove('correct'); if(got.length) el.classList.add('incorrect'); else el.classList.remove('incorrect'); }
+        else {
+          el.classList.remove('correct');
+          if(got.length) el.classList.add('incorrect');
+          else el.classList.remove('incorrect');
+        }
       }
       answers.forEach(el=>{ el.addEventListener('input', ()=>check(el)); check(el); });
     })();
-  </script>
 </body>
 </html>
