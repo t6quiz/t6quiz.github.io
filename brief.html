@@ -3,127 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VT-6 NATOPS BRIEF</title>
+  <title>VT-6 NATOPS BRIEF QUIZ</title>
   <style>
     body { font-family: Arial, sans-serif; background:#fff; color:#111; padding:32px; margin:0 auto; max-width:860px; line-height:1.45; }
     header { text-align:center; margin-bottom:24px; }
     h1 { font-size:22px; margin:0 0 4px; text-transform:uppercase; text-decoration:underline; color:#0a3aff; }
     section { border:2px solid #000; padding:20px; margin:20px 0; box-shadow:0 0 10px rgba(0,0,0,.08); }
-    h2 { font-size:18px; margin:0 0 12px; text-decoration:underline; }
     ol { margin:0 0 0 20px; padding:0; }
     li { margin:10px 0; }
     .bold { font-weight:bold; }
     textarea.answer { width:100%; font-size:16px; padding:8px; border:1px solid #ccc; border-radius:6px; background:#fff; resize:vertical; white-space:pre-wrap; }
     .correct { background:#c8f7c5 !important; }
     .incorrect { background:#f8c5c5 !important; }
-    ol.alpha { list-style-type: none; counter-reset: alpha; }
-    ol.alpha > li { position: relative; padding-left: 24px; }
-    ol.alpha > li::before { position:absolute; left:0; counter-increment: alpha; content: counter(alpha, lower-alpha) ") "; font-weight:bold; }
+    ol.alpha { list-style-type:none; counter-reset:alpha; }
+    ol.alpha>li{position:relative;padding-left:24px;}
+    ol.alpha>li::before{position:absolute;left:0;counter-increment:alpha;content:counter(alpha,lower-alpha)") ";font-weight:bold;}
   </style>
 </head>
 <body>
   <header>
-    <h1>VT-6 NATOPS BRIEF</h1>
+    <h1>VT-6 NATOPS BRIEF QUIZ</h1>
   </header>
 
   <section id="quiz-section">
     <ol class="alpha">
-      <li><span class="bold">DOR/TTO Policy</span><br>
-        <textarea rows="2" class="answer" data-answer="is in effect during safe, non-critical phases of flight."></textarea>
-      </li>
-
-      <li><span class="bold">Minimum/Emergency Fuel</span><br>
-        <textarea rows="3" class="answer" data-answer="Declare minimum or emergency fuel if calculated to land below 200lbs or 120lbs respectively."></textarea>
-      </li>
-
-      <li><span class="bold">Frequencies / NAVAIDS</span><br>
-        <textarea rows="4" class="answer" data-answer="- Presets / As Assigned\n- UHF GUARD shall be monitored at all times."></textarea>
-      </li>
-
-      <li><span class="bold">Radio procedures and discipline</span><br>
-        <textarea rows="3" class="answer" data-answer="Pilot at the controls will make all radio calls unless otherwise briefed using standard clear and concise COMMS backed up by the non-flying pilot."></textarea>
-      </li>
-
-      <li><span class="bold">Change of aircraft controls</span><br>
-        <textarea rows="6" class="answer" data-answer="Execute a positive three way change of controls to include the UFCP. If in doubt as to who has the controls, maintain/take control and sort it out verbally who should be at the controls. In the event of ICS failure “shake to take, pump to pass.”"></textarea>
-      </li>
-
-      <li><span class="bold">Clearing / Lookout procedures</span><br>
-        <textarea rows="4" class="answer" data-answer="- Call out traffic using the clock system, high/level/low, relative direction of travel, factor/no factor.\n- Any crewmember can assume controls to avoid a collision."></textarea>
-      </li>
-
-      <li><span class="bold">Actual</span><br>
-        <textarea rows="5" class="answer" data-answer="- Treat all emergencies as actual unless prefaced by the word “simulated.”\n- Maintain aircraft control, analyze the situation and take proper action, and land as soon as conditions permit. Use appropriate CRM to combat the EP and consult the pocket checklist as time and conditions permit."></textarea>
-      </li>
-
-      <li><span class="bold">Simulated</span><br>
-        <textarea rows="5" class="answer" data-answer="- All simulated EPs will be prefaced with “Simulated.”\n- SNA will analyze the situation as provided by the IP, name the corresponding EP, state the CAMIs over the ICS and SHALL NOT PULL THE PCL OFF DURING A SIMULATED EP, move any switches, nor pull any circuit breakers."></textarea>
-      </li>
-
-      <li><span class="bold">PCL control - simulated power loss</span><br>
-        <textarea rows="6" class="answer" data-answer="- The IP may initiate a simulated power loss by setting the PCL to IDLE and stating simulated indications/conditions. The SNA will not manipulate the PCL for the remainder of the simulated power loss except for safety of flight.\n- The intent is to complete the simulated forced landing to a touch and go with the PCL set at 4-6% Tq to simulate a touch down with a feathered prop."></textarea>
-      </li>
-
-      <li><span class="bold">Aborted Takeoff</span><br>
-        <textarea rows="5" class="answer" data-answer="- Abort for any EP, aircraft state, or runway hazard affecting safety of flight at or below max abort speed.\n- The command will be, “ABORT, ABORT, ABORT.”\n- Do not sacrifice directional control for braking action."></textarea>
-      </li>
-
-      <li><span class="bold">Loss of Directional Control on Runway / Departing the Prepared Surface</span><br>
-        <textarea rows="6" class="answer" data-answer="- If loss of directional control is encountered, prioritize getting airborne.\n- If the aircraft is too slow or unsafe to get airborne, conduct the Emergency Engine Shutdown on the Ground procedure as soon as departure from the prepared surface is recognized.\n- Immediate ejection should be considered based on the situation (e.g. high rates of speed, high angle off runway centerline, departing into unfavorable terrain, impact with obstacle is imminent, or if the aircraft may roll over)."></textarea>
-      </li>
-
-      <li><span class="bold">Landing Irregularities / Wave-Off</span><br>
-        <textarea rows="5" class="answer" data-answer="- Wave-offs are free, but once called are mandatory. If the reason for wave-off is not known, discuss with the other aircrew once the aircraft is safely climbing.\n- If a landing irregularity is encountered or if anyone directs a wave-off, comply with FWOP/FTI procedure."></textarea>
-      </li>
-
-      <li><span class="bold">Stall / Out of Control Flight</span><br>
-        <textarea rows="7" class="answer" data-answer="- For stall recoveries execute: RELAX, MAX, LEVEL, BALL\n- OCF recoveries execute:\n1. PCL - IDLE\n2. CONTROLS - NEUTRAL\n3. ALTITUDE - CHECK\n4. RECOVER FROM UNUSUAL ATTITUDE"></textarea>
-      </li>
-
-      <li><span class="bold">Engine Failure / Uncommanded Power Change</span><br>
-        <textarea rows="14" class="answer" data-answer="- Engine failure during flight: Zoom/Glide - 125 KNOTS (MINIMUM) PCL - OFF INTERCEPT ELP AIRSTART - ATTEMPT IF WARRANTED IF AIRSTART IS NOT WARRANTED: PCL - OFF FIREWALL SHUTOFF HANDLE - PULL EXECUTE FORCED LANDING OR EJECT\n- Analyze primarily N1 and ITT to avoid shutting down a potentially good engine. If N1 reads 0% w/in 5 seconds with ITT rapidly decreasing, execute Engine Failure During Flight procedure.\n- Do not descend below 2000’ AGL with a failed engine unless on profile, runway in sight, maneuvering capability, 300’ AGL final decision to eject, 200’ gear down, 100’ on centerline (ORM 321).\n- If N1 reads 50% or more and ITT is not decreasing, use Np, Torque, engine noise, etc. to determine if Uncommanded Prop Feather or other malfunction exists (e.g. Compressor Stall).\n- Uncommanded Power Change / Loss of Power / Uncommanded Prop Feather: PCL - MID RANGE PMU SWITCH - OFF PROP SYS CIRCUIT BREAKER - PULL, IF NP STABLE BELOW 40% PCL - AS REQUIRED IF POWER IS SUFFICIENT FOR CONTINUED FLIGHT: PEL - EXECUTE IF POWER IS INSUFFICIENT FOR CONTINUED FLIGHT: PROP SYS CIRCUIT BREAKER - RESET, AS REQUIRED PCL - OFF FIREWALL SHUTOFF HANDLE - PULL EXECUTE FORCED LANDING OR EJECT"></textarea>
-      </li>
-
-      <li><span class="bold">Damaged Aircraft / Bird strike</span><br>
-        <textarea rows="8" class="answer" data-answer="- If the aircraft is uncontrollable due to damage or aircrew injuries, execute ejection based on urgency and remaining altitude.\n- If the aircraft is controllable - Determine the nature of the damage and perform a Controllability Check in IAW NATOPS, recommend 8,000 to 10,000’ AGL.\n- Bird strike Within Prop Arc - Consider a PEL to the nearest suitable field.\n- Bird strike Outside Prop Arc - If controllability is in question, perform a Controllability Check."></textarea>
-      </li>
-
-      <li><span class="bold">Radio Failure / ICS Failure</span><br>
-        <textarea rows="6" class="answer" data-answer="- Troubleshoot in accordance with the Loss of ICS/Audio EP.\n- If unable to regain radio: Execute 3 FWOP scenarios\n- If unable to restore ICS, use shake to take to transfer control to the PIC. Consider using a discrete frequency on the radio not in use or, if altitude permits, dropping the mask and shout. All training will be terminated."></textarea>
-      </li>
-
-      <li><span class="bold">Inadvertent IMC</span><br>
-        <textarea rows="8" class="answer" data-answer="VFR flight plan: \n- Establish an instrument scan and check altitude.\n- If altitude below Maximum Elevation Figure (MEF) + 1000’, execute immediate climb to safe altitude turning away from known obstacles.\n- If altitude above MEF+1000, get out of IMC the way it was entered.\n- If unable to regain VMC, IP will contact ATC and coordinate an IFR clearance."></textarea>
-      </li>
-
-      <li><span class="bold">Downed Pilot / Aircraft</span><br>
-        <textarea rows="8" class="answer" data-answer="- PIC will assume on scene commander duties and follow TW-5 In-Flight Guide checklist.\n- Establish a max endurance profile and stay on scene until:\n- Bingo fuel\n- Encountering an emergency of our own\n- Properly relieved by a more capable SAR platform\n- Services are no longer needed"></textarea>
-      </li>
-
-      <li><span class="bold">CFS</span><br>
-        <textarea rows="8" class="answer" data-answer="On deck IAW Emergency Ground Egress:\n -Call “Standby CFS” to remove pins. Verbally confirm complete.\n- Call “CFS, CFS, CFS” (locate, rotate, and pull) for simultaneous detonation.\nAirborne: (If required IAW Smoke and Fume Elimination / Electrical Fire)\n- Stow CFS pin in respective flight suit pocket to prevent FOD.\n- Detonate IAW NATOPS calling “CFS, CFS, CFS.”"></textarea>
-      </li>
+      <li><span class="bold">DOR/TTO Policy</span><br><textarea rows="2" class="answer" data-answer="is in effect during safe, non-critical phases of flight."></textarea></li>
+      <li><span class="bold">Minimum/Emergency Fuel</span><br><textarea rows="3" class="answer" data-answer="Declare minimum or emergency fuel if calculated to land below 200lbs or 120lbs respectively."></textarea></li>
+      <li><span class="bold">Frequencies / NAVAIDS</span><br><textarea rows="4" class="answer" data-answer="- Presets / As Assigned\n- UHF Guard shall be monitored at all times."></textarea></li>
+      <li><span class="bold">Radio procedures and discipline</span><br><textarea rows="3" class="answer" data-answer="Pilot at the controls will make all radio calls unless otherwise briefed using standard clear and concise COMMS backed up by the non-flying pilot."></textarea></li>
+      <li><span class="bold">Change of aircraft controls</span><br><textarea rows="6" class="answer" data-answer="Execute a positive three way change of controls to include the UFCP. If in doubt as to who has the controls, maintain/take control and sort it out verbally who should be at the controls. In the event of ICS failure “shake to take, pump to pass.”"></textarea></li>
+      <li><span class="bold">Clearing / Lookout procedures</span><br><textarea rows="4" class="answer" data-answer="- Call out traffic using the clock system, high/level/low, relative direction of travel, factor/no factor.\n- Any crewmember can assume controls to avoid a collision."></textarea></li>
+      <li><span class="bold">Actual</span><br><textarea rows="5" class="answer" data-answer="- Treat all emergencies as actual unless prefaced by the word “simulated.”\n- Maintain aircraft control, analyze the situation and take proper action, and land as soon as conditions permit. Use appropriate CRM to combat the EP and consult the pocket checklist as time and conditions permit."></textarea></li>
+      <li><span class="bold">Simulated</span><br><textarea rows="5" class="answer" data-answer="- All simulated EPs will be prefaced with “Simulated.”\n- SNA will analyze the situation as provided by the IP, name the corresponding EP, state the CAMIs over the ICS and SHALL NOT PULL THE PCL OFF DURING A SIMULATED EP, move any switches, nor pull any circuit breakers."></textarea></li>
+      <li><span class="bold">PCL control - simulated power loss</span><br><textarea rows="6" class="answer" data-answer="- The IP may initiate a simulated power loss by setting the PCL to IDLE and stating simulated indications/conditions. The SNA will not manipulate the PCL for the remainder of the simulated power loss except for safety of flight.\n- The intent is to complete the simulated forced landing to a touch and go with the PCL set at 4-6% Tq to simulate a touch down with a feathered prop."></textarea></li>
+      <li><span class="bold">Aborted Takeoff</span><br><textarea rows="5" class="answer" data-answer="- Abort for any EP, aircraft state, or runway hazard affecting safety of flight at or below max abort speed.\n- The command will be, “ABORT, ABORT, ABORT.”\n- Do not sacrifice directional control for braking action."></textarea></li>
+      <li><span class="bold">Loss of Directional Control on Runway / Departing the Prepared Surface</span><br><textarea rows="6" class="answer" data-answer="- If loss of directional control is encountered, prioritize getting airborne.\n- If the aircraft is too slow or unsafe to get airborne, conduct the Emergency Engine Shutdown on the Ground procedure as soon as departure from the prepared surface is recognized.\n- Immediate ejection should be considered based on the situation (e.g. high rates of speed, high angle off runway centerline, departing into unfavorable terrain, impact with obstacle is imminent, or if the aircraft may roll over)."></textarea></li>
+      <li><span class="bold">Landing Irregularities / Wave-Off</span><br><textarea rows="5" class="answer" data-answer="- Wave-offs are free, but once called are mandatory. If the reason for wave-off is not known, discuss with the other aircrew once the aircraft is safely climbing.\n- If a landing irregularity is encountered or if anyone directs a wave-off, comply with FWOP/FTI procedure."></textarea></li>
+      <li><span class="bold">Stall / Out of Control Flight</span><br><textarea rows="7" class="answer" data-answer="- For stall recoveries execute: RELAX, MAX, LEVEL, BALL\n- OCF recoveries execute:\n1. PCL - IDLE\n2. CONTROLS - NEUTRAL\n3. ALTITUDE - CHECK\n4. RECOVER FROM UNUSUAL ATTITUDE"></textarea></li>
+      <li><span class="bold">Engine Failure / Uncommanded Power Change</span><br><textarea rows="14" class="answer" data-answer="- Engine failure during flight: Zoom/Glide - 125 KNOTS (MINIMUM) PCL - OFF INTERCEPT ELP AIRSTART - ATTEMPT IF WARRANTED IF AIRSTART IS NOT WARRANTED: PCL - OFF FIREWALL SHUTOFF HANDLE - PULL EXECUTE FORCED LANDING OR EJECT\n- Analyze primarily N1 and ITT to avoid shutting down a potentially good engine. If N1 reads 0% w/in 5 seconds with ITT rapidly decreasing, execute Engine Failure During Flight procedure.\n- Do not descend below 2000’ AGL with a failed engine unless on profile, runway in sight, maneuvering capability, 300’ AGL final decision to eject, 200’ gear down, 100’ on centerline (ORM 321).\n- If N1 reads 50% or more and ITT is not decreasing, use Np, Torque, engine noise, etc. to determine if Uncommanded Prop Feather or other malfunction exists (e.g. Compressor Stall).\n- Uncommanded Power Change / Loss of Power / Uncommanded Prop Feather: PCL - MID RANGE PMU SWITCH - OFF PROP SYS CIRCUIT BREAKER - PULL, IF NP STABLE BELOW 40% PCL - AS REQUIRED IF POWER IS SUFFICIENT FOR CONTINUED FLIGHT: PEL - EXECUTE IF POWER IS INSUFFICIENT FOR CONTINUED FLIGHT: PROP SYS CIRCUIT BREAKER - RESET, AS REQUIRED PCL - OFF FIREWALL SHUTOFF HANDLE - PULL EXECUTE FORCED LANDING OR EJECT"></textarea></li>
+      <li><span class="bold">Damaged Aircraft / Bird strike</span><br><textarea rows="8" class="answer" data-answer="- If the aircraft is uncontrollable due to damage or aircrew injuries, execute ejection based on urgency and remaining altitude.\n- If the aircraft is controllable - Determine the nature of the damage and perform a Controllability Check in IAW NATOPS, recommend 8,000 to 10,000’ AGL.\n- Bird strike Within Prop Arc - Consider a PEL to the nearest suitable field.\n- Bird strike Outside Prop Arc - If controllability is in question, perform a Controllability Check."></textarea></li>
+      <li><span class="bold">Radio Failure / ICS Failure</span><br><textarea rows="6" class="answer" data-answer="- Troubleshoot in accordance with the Loss of ICS/Audio EP.\n- If unable to regain radio: Execute 3 FWOP scenarios\n- If unable to restore ICS, use shake to take to transfer control to the PIC. Consider using a discrete frequency on the radio not in use or, if altitude permits, dropping the mask and shout. All training will be terminated."></textarea></li>
+      <li><span class="bold">Inadvertent IMC</span><br><textarea rows="8" class="answer" data-answer="VFR flight plan: \n- Establish an instrument scan and check altitude.\n- If altitude below Maximum Elevation Figure (MEF) + 1000’, execute immediate climb to safe altitude turning away from known obstacles.\n- If altitude above MEF+1000, get out of IMC the way it was entered.\n- If unable to regain VMC, IP will contact ATC and coordinate an IFR clearance."></textarea></li>
+      <li><span class="bold">Downed Pilot / Aircraft</span><br><textarea rows="8" class="answer" data-answer="- PIC will assume on scene commander duties and follow TW-5 In-Flight Guide checklist.\n- Establish a max endurance profile and stay on scene until:\n- Bingo fuel\n- Encountering an emergency of our own\n- Properly relieved by a more capable SAR platform\n- Services are no longer needed"></textarea></li>
+      <li><span class="bold">CFS</span><br><textarea rows="8" class="answer" data-answer="On deck IAW Emergency Ground Egress:\n -Call “Standby CFS” to remove pins. Verbally confirm complete.\n- Call “CFS, CFS, CFS” (locate, rotate, and pull) for simultaneous detonation.\nAirborne: (If required IAW Smoke and Fume Elimination / Electrical Fire)\n- Stow CFS pin in respective flight suit pocket to prevent FOD.\n- Detonate IAW NATOPS calling “CFS, CFS, CFS.”"></textarea></li>
     </ol>
   </section>
 
   <script>
     (function(){
-      const answers = document.querySelectorAll('.answer');
-      function normalize(str){
-        return (str || '').trim().replace(/\r/g, '').replace(/\s+/g, ' ').toLowerCase();
-      }
+      const answers=document.querySelectorAll('.answer');
+      function normalize(str){return(str||'').trim().replace(/\r/g,'').replace(/\s+/g,' ').toLowerCase();}
       function check(el){
-        const want = normalize(el.dataset.answer);
-        const got = normalize(el.value);
-        if(!want){ el.classList.remove('correct','incorrect'); return; }
-        if(got === want){ el.classList.add('correct'); el.classList.remove('incorrect'); }
-        else {
-          el.classList.remove('correct');
-          if(got.length) el.classList.add('incorrect');
-          else el.classList.remove('incorrect');
-        }
+        const want=normalize(el.dataset.answer);
+        const got=normalize(el.value);
+        if(!want){el.classList.remove('correct','incorrect');return;}
+        if(got===want){el.classList.add('correct');el.classList.remove('incorrect');}
+        else{el.classList.remove('correct');if(got.length)el.classList.add('incorrect');else el.classList.remove('incorrect');}
       }
-      answers.forEach(el=>{ el.addEventListener('input', ()=>check(el)); check(el); });
+      answers.forEach(el=>{el.addEventListener('input',()=>check(el));check(el);});
     })();
+  </script>
 </body>
 </html>
